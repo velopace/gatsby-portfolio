@@ -1,10 +1,12 @@
 import React from 'react'
-import { Link } from 'gatsby'
+import { graphql, Link } from 'gatsby'
 
 import Layout from '../components/Layout'
 import * as styles from '../styles/home.module.css'
 
-export default function Home() {
+export default function Home({ data }) {
+  const { title, description } = data.site.siteMetadata
+
   return (
     <Layout>
       <section className={styles.header}>
@@ -15,7 +17,20 @@ export default function Home() {
           <Link className={styles.btn} to="/projects">My Portfolio Projects</Link>
         </div>
         <img src="/banner.png" alt="site banner" style={{ maxWidth: '100%' }} />
+        <p>{ title } - { description } </p>
       </section>
     </Layout>
   )
 }
+
+export const query = graphql`
+  query SiteInfo {
+    site {
+      siteMetadata {
+        copyright
+        description
+        title
+      }
+    }
+  }
+`
