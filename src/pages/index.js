@@ -14,6 +14,7 @@ export default function Home() {
           <p>Web developer based in Little Rock.</p>
           <Link className={styles.btn} to="/projects">My Portfolio Projects</Link>
         </div>
+        <img src="/banner.png" alt="site banner" style={{ maxWidth: '100%' }} />
       </section>
     </Layout>
   )
