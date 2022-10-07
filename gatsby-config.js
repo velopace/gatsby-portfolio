@@ -19,6 +19,7 @@ module.exports = {
   siteMetadata: {
     title: 'VELOPACE',
     description: 'Web Development Portfolio',
-    copyright: 'This website is copyright 2022 VELOPACE'
+    copyright: 'This website is copyright 2022 VELOPACE',
+    contact: 'velopace@outlook.com'
   }
 }
